@@ -29,7 +29,7 @@ function createConfirmationMessage() {
     // Crée un message de confirmation dans une nouvelle div
     const confirmationMessage = document.createElement('div');
     // Ajout de la classe CSS
-    confirmationMessage.className('confirmation-message');
+    confirmationMessage.className= 'confirmation-message';
     // Définit le contenu HTML du message de confirmation
     confirmationMessage.innerHTML = `
     <div class="confirmation-content">
