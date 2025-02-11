@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(195deg,#303030 0%, white 50%, #303030 100%);
+    padding: 20px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+}
+
+.row{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Partie de gauche */
+
+.content {
+    flex: 1;
+    color: black;
+    animation: slideInleft 1s ease-out;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.content p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contat-info {
+    margin-top: 30px;
+}
+
+.contact-info p{
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-info strong{
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style du formulaire */
+
+.form-control{
+    width: 100%;
+    padding: 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+    box-shadow: none;
+    border: 1px solid #303030;
+}
+
+.select-custom{
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.submit.btn{
+    width: 100%;
+    padding: 15px;
+    background: #303030;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-banner{
+    background-color: #303030;
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    color: white;
+}
+
+.confirmation-message.active{
+    display: flex;
+    opacity: 1;
+}
+
+.confirmation-content{
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.confirmation-message.active .confirmation-content{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.confirmation-icon{
+    width: 60px;
+    height: 60px;
+    background: #303030;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 30px;
+    animation: scaleIn 0.5s ease, vibrate 0.5s ease 0.5s;
+}
+
+.close-btn{
+    background: #303030;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.close-btn:hover{
+    background: white;
+}
+
+/* Animation du message de confirmation */
+
+@keyframes scaleIn {
+    from {transform: scale(0);}
+    to{transform: scale(1);}
+}
+
+@keyframes vibrate {
+    0%, 100% {transform: rotate(0);}
+    25% {transform: rotate(-10deg);}
+    75% {transform: rotate(10deg);}
+}
+
+/* Media Queries pour le responsive */
+
+@media (max-width: 768px){
+    .row{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .content {
+        text-align: left;
+    }
+    .content h1 {
+        font-size: 32px;
+    }
+}
